@@ -1,10 +1,6 @@
 
-document.querySelectorAll(".pricing-option").forEach(function(element){
-    var button = element.querySelector(".button");
-    var price = element.querySelector(".price");
-    paypal.Button.render(
-      console.log(button.id),
-      {
+["btn-paypal-1","btn-paypal-2","btn-paypal-3"].forEach(function(element){
+    paypal.Button.render({
         // Configure environment
         env: 'sandbox',
         client: {
@@ -27,7 +23,7 @@ document.querySelectorAll(".pricing-option").forEach(function(element){
           return actions.payment.create({
             transactions: [{
               amount: {
-                total: price,
+                total: 100,
                 currency: 'USD'
               }
             }]
@@ -40,5 +36,5 @@ document.querySelectorAll(".pricing-option").forEach(function(element){
             window.alert('Thank you for your purchase!');
           });
         }
-      }, '#'+button.id+'');
+      }, element);
 });
