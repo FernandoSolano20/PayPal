@@ -10,7 +10,14 @@ body {
 .demo-title {
   text-align: center;
   font-size: 3rem;
+  margin-bottom: 25px;
+}
+
+.demo-subtitle {
+  text-align: center;
+  font-size: 1.5rem;
   margin-bottom: 50px;
+  font-weight: normal;
 }
 
 .pricing-table {
