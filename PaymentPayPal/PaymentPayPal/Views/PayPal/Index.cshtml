@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1 class="demo-title">Galeri&#769;a de arte</h1>
+<h2 class="demo-subtitle">Una increi&#769;ble pintura, una increi&#769;ble historia</h2>
+<div id="paypal-button-container"></div>
+
+<div class="pricing-table">
+    <div class="pricing-option">
+        <img src="https://res.cloudinary.com/grupo-bejuco/image/upload/v1582915500/elgrito_pjgxa4.png"
+             alt="">
+        <h1>El Grito</h1>
+        <hr />
+        <p>La pintura "El Grito" muestra una figura andrógina que simboliza a un hombre moderno en un momento de profunda angustia y desesperación existencial. El paisaje del fondo es Oslo visto desde la colina de Ekeberg.</p>
+        <hr />
+        <div class="price">
+            <div class="front">
+                <span class="price">199 <b>$</b></span>
+            </div>
+            <div class="back">
+                <div class="button" id="btn-paypal-1"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pricing-option">
+        <img src="https://res.cloudinary.com/grupo-bejuco/image/upload/v1582915591/starrynight_x9cprw.jpg"
+             alt="">
+        <h1>La Noche Estrellada</h1>
+        <hr />
+        <p>El cuadro "La Noche Estrellada" representa las vistas nocturnas que tenía Vincent Van Gogh desde su habitación en el sanatorio mental de Saint-Remy, donde pasó los últimos años de su vida.</p>
+        <hr />
+        <div class="price">
+            <div class="front">
+                <span class="price">399 <b>$</b></span>
+            </div>
+            <div class="back">
+                <div class="button" id="btn-paypal-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pricing-option">
+        <img src="https://res.cloudinary.com/grupo-bejuco/image/upload/v1582915674/dogsplayingpoker_kjaidy.jpg"
+             alt="">
+        <h1>Perros Jugando Poker</h1>
+        <hr />
+        <p>"Perros Jugando al Poker" es una serie de pinturas realizadas por Cassius Marcellus Coolidge. En total 16 obras que muestran a perros con actitudes humanas, de las cuales 9 las mostraban jugando al póquer.</p>
+        <hr />
+        <div class="price">
+            <div class="front">
+                <span class="price">999 <b>$</b></span>
+            </div>
+            <div class="back">
+                <div class="button" id="btn-paypal-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pricing-table">
+    <div class="pricing-option">
+        <img src="https://d2jv9003bew7ag.cloudfront.net/uploads/Sandro_Botticelli_-_La_nascita_di_Venere.jpg"
+             alt="">
+        <h1>Nacimiento de Venus</h1>
+        <hr />
+        <p>"El nacimiento de Venus de Sandro Botticelli representa a la diosa griega del amor mientras emerge del mar como una mujer adulta."</p>
+        <hr />
+        <div class="price">
+            <div class="front">
+                <span class="price">400 <b>$</b></span>
+            </div>
+            <div class="back">
+                @Html.ActionLink("Pagar con cuenta PayPal", "PaymentWithPaypal", "Paypal", new
+                {                                                     // htmlAttributes
+                    price = "400",
+                    product = "El nacimeinto de Venus"
+                }, new { @class = "button" })
+            </div>
+        </div>
+    </div>
+
+    <div class="pricing-option">
+        <img src="https://d2jv9003bew7ag.cloudfront.net/uploads/Leonardo-da-Vinci-Mona-Lisa-.jpg"
+             alt="">
+        <h1>Mona Lisa</h1>
+        <hr />
+        <p>"Ampliamente conocida por su sonrisa misteriosa y su belleza eterna, una de las pinturas de mujeres más famosas jamás realizadas, la Mona Lisa de Leonardo da Vinci, representa un clásico retrato renacentista de medio cuerpo, con un fondo de un paisaje lejano.</p>
+        <hr />
+        <div class="price">
+            <div class="front">
+                <span class="price">699 <b>$</b></span>
+            </div>
+            <div class="back">
+                @Html.ActionLink("Pagar con cuenta PayPal", "PaymentWithPaypal", "Paypal", new
+                {                                                     // htmlAttributes
+                    price = "699",
+                    product = "Mona Lisa"
+                }, new { @class = "button" })
+            </div>
+        </div>
+    </div>
+
+    <div class="pricing-option">
+        <img src="https://www.tucucu.com/wp-content/uploads/2018/11/lucifer-expulsado-del-infierno-2-616x437.jpg"
+             alt="">
+        <h1>El ángel caido</h1>
+        <hr />
+        <p>"Estudio anatómico del mismísimo Lucifer, que fue durante un tiempo la mano derecha de Dios. Inteligentísimo y muy hermoso, el ángel tenía un pequeño defecto: la soberbia.</p>
+        <hr />
+        <div class="price">
+            <div class="front">
+                <span class="price">359 <b>$</b></span>
+            </div>
+            <div class="back">
+                @Html.ActionLink("Pagar con cuenta PayPal", "PaymentWithPaypal", "Paypal", new
+                {                                                     // htmlAttributes
+                    price = "359",
+                    product = "El ángel caido"
+                }, new { @class = "button" })
+            </div>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/js")
