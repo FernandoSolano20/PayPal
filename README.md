@@ -119,7 +119,7 @@ Una vez completados estos pasos, el botón deberá ser generado en su archivo HT
 
 #### Ver tutorial en YouTube
 
-Para conocer un poco más sobre esta implementación,  visite nuestro vídeo en YouTube: [Sistema de pagos con PayPal](https://youtube.com/watch)
+Para conocer un poco más sobre esta implementación,  visite nuestro vídeo en YouTube: [Sistema de pagos con PayPal](https://www.youtube.com/watch?v=dmjnSFbUna0&feature=youtu.be)
 
 
 ------------
@@ -135,6 +135,7 @@ La presente investigación fue realizada por Grupo Bejuco durante el curso de Pr
 - Andrés Bonilla Agüero (abonillaa@ucenfotec.ac.cr)
 - Julissa Garay Montalvan (jgaray@ucenfotec.ac.cr)
 - María Fernanda Granados Arias (mgranadosa@ucenfotec.ac.cr)
+- Jorge Mata Garro (jmatag@ucenfotec.ac.cr)
 - Luis Fernando Solano Montoya (lsolanom1@ucenfotec.ac.cr)
 - Axel Ulate Ulate (aulateu@ucenfotec.ac.cr)
 
