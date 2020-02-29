@@ -17,7 +17,7 @@ Su sistema permite transacciones en línea rápidas y seguras , ya que Paypal se
 
 ### Objetivo
 
-En este repositorio encontrará la información necesaria para configurar y realizar pagos en línea mediante el API de PayPal, incluyendo los pasos para completar el registro dentro de la plataforma y el código HTML y JS utilizado.
+En este repositorio encontrará la información necesaria para configurar y realizar pagos en línea mediante el API de PayPal, incluyendo los pasos para completar el registro dentro de la plataforma y el código HTML, JS y C# utilizado.
 
 ------------
 
@@ -53,7 +53,7 @@ En caso de requerir una cuenta **Sandbox** personalizada, puede seleccionar la o
 
 ------------
 
-#### Funciomiento en código
+#### Funciomiento en código JS
 
 Para la implementación del API de PayPal deberá crear un archivo HTML y un archivo JS. 
 
@@ -76,8 +76,8 @@ paypal.Button.render({
   // Configuración de los keys de prueba y de producción de Paypal
   env: 'sandbox',
   client: {
-    sandbox: 'AdBR9YXW-9rlG2EIviB4k8Z3atEXd_XWB5kZwOi5-BHgoOKnwH0vUoXgU3gB-rOi7ZGqFkJ0paE7fhQz',
-    production: 'EPwPXKi-sRlD7JtUkJovsKsw9PaNSS3OscyhVFmB7jKzlO6XRh61xr5-OzsIMcWaoaTsshLz4EW8onR7'
+    sandbox: ' #Token de transacción sandbox',
+    production: '#Token de transacción de produción'
   },
   // Customización del botón mostrado
   locale: 'en_US',
@@ -116,10 +116,39 @@ Una vez completados estos pasos, el botón deberá ser generado en su archivo HT
 
 ------------
 
+#### Funciomiento en código C#
+
+Los pasos compartidos anteriormente son de gran utilidad si se desea realizar el procesamiento de los pagos **directamente en el navegador**. En el caso que se desee  procesar dichos pagos desde el lado del servidor utilizando una propuesta de diseño **MVC**, deberá seguir estos pasos:
+
+1. Ingresar a **Visual Studio**
+2. Crear un proyecto **WEB Application MVC**
+3. Instalar el paquete Nuget **Paypal 1.5.0**
+4. Crear el controlador **PayPalController**, donde se recibirán los *request* de los usuarios desde el navegador. Acá se implementa el método PaymentWithPaypal
+5. Agregar la clase **ConfigurationPaypal**, donde obtiene la información necesaria para conectarse con el API.
+6. Generar las vistas para la visualización del catálogo, además de las vistas para el mensaje de confirmación y el mensaje de fallo, en caso de que suceda un error durante la transacción, el usuario esté informado.
+
+**IMPORTANTE:** Dentro del Web.Config del proyecto, deberá agregar los tokens tanto **Sandbox** como **Production** como se muestra a continuación:
+
+```xml
+<paypal>
+    <settings>
+      <add name="mode" value="sandbox"/>
+      <add name="connectionTimeout" value="360000"/>
+      <add name="requestRetries" value="1"/>
+      <add name="clientId" value="Token de transacción sandbox"/>
+      <add name="clientSecret" value="Token de transacción de produción"/>
+    </settings>
+  </paypal>
+```
+Para más detalles en la implementación de esta propuesta, por favor visitar nuestro vídeo en YouTube, que se encuentra en la parte de abajo de esta documentación o ingresar al código del repositorio.
+
+------------
+
+
 
 #### Ver tutorial en YouTube
 
-Para conocer un poco más sobre esta implementación,  visite nuestro vídeo en YouTube: [Sistema de pagos con PayPal](https://www.youtube.com/watch?v=dmjnSFbUna0&feature=youtu.be)
+Para conocer un poco más sobre esta implementación,  visite nuestro vídeo en YouTube: [Sistema de pagos con PayPal](https://www.youtube.com/watch?v=9VkrnMwp-Bk&feature=youtu.be)
 
 
 ------------
