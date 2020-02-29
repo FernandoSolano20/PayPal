@@ -148,6 +148,8 @@ Para más detalles en la implementación de esta propuesta, por favor visitar nu
 
 #### Ver tutorial en YouTube
 
+<img src="https://res.cloudinary.com/grupo-bejuco/image/upload/v1582993910/yt_j7kaib.png" width="100"/>
+
 Para conocer un poco más sobre esta implementación,  visite nuestro vídeo en YouTube: [Sistema de pagos con PayPal](https://www.youtube.com/watch?v=9VkrnMwp-Bk&feature=youtu.be)
 
 
